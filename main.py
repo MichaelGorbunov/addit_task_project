@@ -1,4 +1,4 @@
-from src.addit_function import sorting_products
+from src.addit_function import sales_statistics, sorting_products
 
 # тест функции sorting_product
 products = [
@@ -19,4 +19,77 @@ products = [
 print(sorting_products(products, "veggie"))
 print(sorting_products(products, "banana"))
 print(sorting_products(products))
+# end this test
+
+# тест функции sales_statistics
+list1 = [
+    {
+        "id": 1,
+        "date": "01.01.2024",
+        "items": [
+            {"name": "tovar1", "price": 10.5, "quantity": 1},
+            {"name": "tovar3", "price": 10.6, "quantity": 1},
+            {"name": "tovar5", "price": 10.2, "quantity": 2},
+        ],
+    },
+    {
+        "id": 2,
+        "date": "01.02.2024",
+        "items": [{"name": "tovar2", "price": 10.5, "quantity": 2}, {"name": "tovar8", "price": 10.3, "quantity": 1}],
+    },
+    {"id": 3, "date": "01.03.2024", "items": [{"name": "tovar3", "price": 10.6, "quantity": 1}]},
+    {"id": 4, "date": "01.04.2024", "items": [{"name": "tovar1", "price": 10.5, "quantity": 3}]},
+    {"id": 5, "date": "01.05.2024", "items": [{"name": "tovar2", "price": 10.7, "quantity": 1}]},
+    {"id": 6, "date": "01.06.2024", "items": [{"name": "tovar1", "price": 10.5, "quantity": 1}]},
+    {
+        "id": 7,
+        "date": "01.07.2024",
+        "items": [{"name": "tovar5", "price": 10.2, "quantity": 2}, {"name": "tovar8", "price": 10.3, "quantity": 1}],
+    },
+    {"id": 8, "date": "01.08.2024", "items": [{"name": "tovar1", "price": 10.5, "quantity": 1}]},
+    {
+        "id": 9,
+        "date": "01.09.2024",
+        "items": [
+            {"name": "tovar8", "price": 10.3, "quantity": 1},
+            {"name": "tovar7", "price": 10.5, "quantity": 1},
+            {"name": "tovar15", "price": 10.5, "quantity": 2},
+        ],
+    },
+    {"id": 10, "date": "01.01.2024", "items": [{"name": "tovar1", "price": 10.5, "quantity": 1}]},
+    {
+        "id": 11,
+        "date": "01.02.2024",
+        "items": [{"name": "tovar1", "price": 10.4, "quantity": 2}, {"name": "tovar7", "price": 10.5, "quantity": 1}],
+    },
+    {"id": 12, "date": "01.03.2024", "items": [{"name": "tovar7", "price": 10.5, "quantity": 1}]},
+    {
+        "id": 13,
+        "date": "01.04.2024",
+        "items": [{"name": "tovar1", "price": 10.9, "quantity": 5}, {"name": "tovar15", "price": 10.5, "quantity": 2}],
+    },
+    {"id": 14, "date": "01.01.2024", "items": [{"name": "tovar11", "price": 10.8, "quantity": 1}]},
+    {
+        "id": 15,
+        "date": "01.09.2024",
+        "items": [
+            {"name": "tovar12", "price": 10.5, "quantity": 1},
+            {"name": "tovar12", "price": 10.5, "quantity": 1},
+        ],
+    },
+    {"id": 16, "date": "01.11.2024", "items": [{"name": "tovar7", "price": 10.6, "quantity": 5}]},
+    {"id": 17, "date": "01.12.2024", "items": [{"name": "tovar18", "price": 10.5, "quantity": 1}]},
+    {"id": 18, "date": "01.08.2024", "items": [{"name": "tovar1", "price": 10.7, "quantity": 1}]},
+    {"id": 19, "date": "01.07.2024", "items": [{"name": "tovar15", "price": 10.5, "quantity": 2}]},
+    {
+        "id": 20,
+        "date": "01.01.2024",
+        "items": [{"name": "tovar9", "price": 102, "quantity": 8}, {"name": "tovar12", "price": 10.5, "quantity": 1}],
+    },
+    {"id": 21, "date": "01.02.2024", "items": [{"name": "tovar8", "price": 10.1, "quantity": 1}]},
+    {"id": 22, "date": "01.03.2024", "items": [{"name": "tovar7", "price": 10.3, "quantity": 1}]},
+    {"id": 23, "date": "01.04.2024", "items": [{"name": "tovar11", "price": 10.2, "quantity": 2}]},
+]
+
+print(sales_statistics(list1))
 # end this test
