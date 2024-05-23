@@ -40,8 +40,13 @@ def summ_price(sales: list, date_order: str) -> dict:
 
 
 def sales_statistics(sales: list[dict]) -> dict:
+    """Функция должна возвращает словарь, содержащий информацию о средней стоимости заказа
+    и количестве заказов за каждый месяц. Ключами словаря должны быть год и месяц в формате
+    YYYY-MM , а значениями — словари, содержащие два поля:
+    average_order_value — средняя стоимость заказа за месяц,
+    order_count— количество заказов за месяц."""
     sales_list: list[dict] = []
-    for item in sales:  # фомирум сиок со словаре дата:сумма товаров в заказе
+    for item in sales:  # фомируем список со словарем вида дата:сумма товаров в заказе
         date_as_mont = (datetime.datetime.strptime(item["date"], "%d.%m.%Y")).strftime("%Y-%m")
 
         sum_orders = 0
@@ -51,7 +56,7 @@ def sales_statistics(sales: list[dict]) -> dict:
         sales_list = sorted(sales_list, key=lambda x: x["date"])
 
     sales_stat_dic = {}
-    date_group_list: list[str] = []
+    date_group_list: list[str] = []  # формируем список месяцев
     for item in sales_list:
         if not item["date"] in date_group_list:
             date_group_list.append(item["date"])
