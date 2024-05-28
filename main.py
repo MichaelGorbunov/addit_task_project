@@ -1,10 +1,15 @@
 from typing import Any
 
-from src.hw_11_1 import non_empty_truths
+from src.hw_11_1 import my_filter, my_map, non_empty_truths, replicate_each
 
 m: list[Any] = [[], [[], []], [[0]], [[0, ""], [False, None]], [[0, 1, 2], [], [], [False, True, 42]]]
 for item in m:
     print(non_empty_truths(item))
+
+print(list(my_map(lambda x: x + 2, [-1, 2, -3])))
+print(list(my_filter(lambda x: x % 2 == 1, range(10))))
+print(list(replicate_each(3, [1, "a"])))
+
 
 # from src.addit_function import sales_statistics, sorting_products
 #
